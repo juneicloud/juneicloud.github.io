@@ -1,6 +1,8 @@
 +++
 title = "印能捷流程输出客户自定义加网角度"
 author = ["Wang Jun"]
+tags = ["Kodak", "Workflow"]
+categories = ["PrePress"]
 draft = false
 +++
 
