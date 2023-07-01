@@ -6,6 +6,8 @@ categories = ["PrePress"]
 draft = false
 +++
 
+<!--more-->
+
 1.  找到印能捷服务器 C:\Prinergy\AdobeExtreme\bin\CreoScreens\Config 路径下的 Creo_SCDV.cfg 文件，用系统记事本工具打开该文件。
 
     {{< figure src="/images/Kodak-prinergy-screen-angle/2023-05-11_15-15-10_screenshot.png" >}}

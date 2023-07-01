@@ -5,27 +5,30 @@ tags = ["PrePress", "Kodak", "Font", "Workflow"]
 draft = false
 +++
 
-## 配置本地 Preps 默认描述文件并使用 CJK 字体 {#配置本地-preps-默认描述文件并使用-cjk-字体}
+Kodak Prinergy and Preps setting Text Mark Font.
 
 <!--more-->
+
+
+## 配置本地 Preps 默认描述文件并使用 CJK 字体 {#配置本地-preps-默认描述文件并使用-cjk-字体}
 
 1.  确认未启动 Preps ，使用记事本打开描述文件，位于 **[Local]C:\Program Files (x86)\Kodak\Preps 7\Profiles\Default\default.cfg** 。
 
     将如下原始的描述语句：
     ```text
-          -CJK_TEXTMARKCHARACTERCOLLECTION:Adobe-Japan1-2
-          -CJK_TEXTMARKENCODING:2561
-          -CJK_TEXTMARKFONTENCODINGSTRING:90ms-RKSJ
-          -CJK_TEXTMARKFONTNAME:Sazanami-Mincho-Regular
-          -CJK_TEXTMARKFONTNAMEPREVIEW:Sazanami-Mincho-Regular
+    -CJK_TEXTMARKCHARACTERCOLLECTION:Adobe-Japan1-2
+    -CJK_TEXTMARKENCODING:2561
+    -CJK_TEXTMARKFONTENCODINGSTRING:90ms-RKSJ
+    -CJK_TEXTMARKFONTNAME:Sazanami-Mincho-Regular
+    -CJK_TEXTMARKFONTNAMEPREVIEW:Sazanami-Mincho-Regular
     ```
     更改为：
     ```text
-          -CJK_TEXTMARKCHARACTERCOLLECTION:Adobe-GB1-4
-          -CJK_TEXTMARKENCODING:256
-          -CJK_TEXTMARKFONTENCODINGSTRING:UniGB-UCS2
-          -CJK_TEXTMARKFONTNAME:ShanHeiSun-Uni
-          -CJK_TEXTMARKFONTNAMEPREVIEW:ShanHeiSun-Uni
+    -CJK_TEXTMARKCHARACTERCOLLECTION:Adobe-GB1-4
+    -CJK_TEXTMARKENCODING:256
+    -CJK_TEXTMARKFONTENCODINGSTRING:UniGB-UCS2
+    -CJK_TEXTMARKFONTNAME:ShanHeiSun-Uni
+    -CJK_TEXTMARKFONTNAMEPREVIEW:ShanHeiSun-Uni
     ```
 
 2.  将 CID 字体 **ShanHeiSun-Uni** 放入 **[Local]C:\Program Files (x86)\Kodak\Preps 7\RIP\Resource\CIDFont** 文件夹下。
@@ -41,11 +44,11 @@ draft = false
 
 1.  使用记事本打开 **[Server]C:\Prinergy\CreoAraxi\AraxiPreps\Profiles\PrepsPrinergy.cfg.template** 加入如下描述：
     ```text
-          -CJK_TEXTMARKCHARACTERCOLLECTION:Adobe-GB1-4
-          -CJK_TEXTMARKENCODING:256
-          -CJK_TEXTMARKFONTENCODINGSTRING:UniGB-UCS2
-          -CJK_TEXTMARKFONTNAME:ShanHeiSun-Uni
-          -CJK_TEXTMARKFONTNAMEPREVIEW:ShanHeiSun-Uni
+    -CJK_TEXTMARKCHARACTERCOLLECTION:Adobe-GB1-4
+    -CJK_TEXTMARKENCODING:256
+    -CJK_TEXTMARKFONTENCODINGSTRING:UniGB-UCS2
+    -CJK_TEXTMARKFONTNAME:ShanHeiSun-Uni
+    -CJK_TEXTMARKFONTNAMEPREVIEW:ShanHeiSun-Uni
     ```
 
 2.  从 Workshop 启动 Preps ，打开首选项可以发现标记标签下的 CJK 字体已更改为 ShanHeiSun-Uni 。
@@ -80,11 +83,11 @@ draft = false
 
 2.  使用记事本打开这些描述文件，分别加入如下描述语句：
     ```text
-          -CJK_TEXTMARKCHARACTERCOLLECTION:Adobe-GB1-4
-          -CJK_TEXTMARKENCODING:256
-          -CJK_TEXTMARKFONTENCODINGSTRING:UniGB-UCS2
-          -CJK_TEXTMARKFONTNAME:ShanHeiSun-Uni
-          -CJK_TEXTMARKFONTNAMEPREVIEW:ShanHeiSun-Uni
+    -CJK_TEXTMARKCHARACTERCOLLECTION:Adobe-GB1-4
+    -CJK_TEXTMARKENCODING:256
+    -CJK_TEXTMARKFONTENCODINGSTRING:UniGB-UCS2
+    -CJK_TEXTMARKFONTNAME:ShanHeiSun-Uni
+    -CJK_TEXTMARKFONTNAMEPREVIEW:ShanHeiSun-Uni
     ```
 
 
@@ -92,10 +95,10 @@ draft = false
 
 -   Prinergy 字体目录
     ```text
-        \AraxiHome\AdobeExtreme\bin\Resource\CIDFont
+    \AraxiHome\AdobeExtreme\bin\Resource\CIDFont
     ```
 
 -   Prinergy EVO 字体目录
     ```text
-        C:\Program Files\Kodak\Prinergy Evo 6.0.6.0\static_data\common\Resource\CIDFont
+    C:\Program Files\Kodak\Prinergy Evo 6.0.6.0\static_data\common\Resource\CIDFont
     ```

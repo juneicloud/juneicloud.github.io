@@ -176,43 +176,43 @@ Adobe illustrator 中关于透明度的相关笔记以及个人理解透明度�
 
 ```python
 
-  def AlphaOverlay (TopColor, BottomColor, TopOpacity, BottomOpacity):
-      TopAlpha = TopColor * TopOpacity / 100
-      BottomAlpha = BottomColor * BottomOpacity / 100
-      Rule = 1 - TopOpacity / 100
-      Overlay = TopAlpha + BottomAlpha * Rule
-      Overlay = float('%.2f' % Overlay)
-      return Overlay
+def AlphaOverlay (TopColor, BottomColor, TopOpacity, BottomOpacity):
+    TopAlpha = TopColor * TopOpacity / 100
+    BottomAlpha = BottomColor * BottomOpacity / 100
+    Rule = 1 - TopOpacity / 100
+    Overlay = TopAlpha + BottomAlpha * Rule
+    Overlay = float('%.2f' % Overlay)
+    return Overlay
 
-  def MultiplyOverlay (TopColor, BottomColor, TopOpacity, BottomOpacity):
-      TopAlpha = TopColor * TopOpacity / 100
-      BottomAlpha = BottomColor * BottomOpacity / 100
-      Rule = 1 - TopAlpha / 100
-      Overlay = TopAlpha + BottomAlpha * Rule
-      Overlay = float('%.2f' % Overlay)
-      return Overlay
+def MultiplyOverlay (TopColor, BottomColor, TopOpacity, BottomOpacity):
+    TopAlpha = TopColor * TopOpacity / 100
+    BottomAlpha = BottomColor * BottomOpacity / 100
+    Rule = 1 - TopAlpha / 100
+    Overlay = TopAlpha + BottomAlpha * Rule
+    Overlay = float('%.2f' % Overlay)
+    return Overlay
 
-  def GetObjectInfoLite (Prompt):
-      InputInfo = input("Enter {} CMYK and alpha :".format(Prompt)).split(',')
-      InputInfo = [int(i) for i in InputInfo]
-      return InputInfo
+def GetObjectInfoLite (Prompt):
+    InputInfo = input("Enter {} CMYK and alpha :".format(Prompt)).split(',')
+    InputInfo = [int(i) for i in InputInfo]
+    return InputInfo
 
-  TopColor = GetObjectInfoLite("the Top Object")
-  BottomColor = GetObjectInfoLite("the Bottom Object")
+TopColor = GetObjectInfoLite("the Top Object")
+BottomColor = GetObjectInfoLite("the Bottom Object")
 
-  print("Top Object Color       :", TopColor)
+print("Top Object Color       :", TopColor)
 
-  print("Bottom Object Color    :", BottomColor)
+print("Bottom Object Color    :", BottomColor)
 
-  FinalAlphaOverlay = [0, 0, 0, 0]
-  FinalMultiplyOverlay = [0, 0, 0, 0]
+FinalAlphaOverlay = [0, 0, 0, 0]
+FinalMultiplyOverlay = [0, 0, 0, 0]
 
-  for i in range(4):
-      FinalAlphaOverlay[i] = AlphaOverlay(TopColor[i], BottomColor[i], TopColor[4], BottomColor[4])
-      FinalMultiplyOverlay[i] = MultiplyOverlay(TopColor[i], BottomColor[i], TopColor[4], BottomColor[4])
+for i in range(4):
+    FinalAlphaOverlay[i] = AlphaOverlay(TopColor[i], BottomColor[i], TopColor[4], BottomColor[4])
+    FinalMultiplyOverlay[i] = MultiplyOverlay(TopColor[i], BottomColor[i], TopColor[4], BottomColor[4])
 
-  print("Alpha Overlay Color    :", FinalAlphaOverlay)
-  print("Multiply Overlay Color :", FinalMultiplyOverlay)
+print("Alpha Overlay Color    :", FinalAlphaOverlay)
+print("Multiply Overlay Color :", FinalMultiplyOverlay)
 ```
 
 

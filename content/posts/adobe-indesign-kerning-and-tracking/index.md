@@ -1,7 +1,7 @@
 +++
 title = "Adobe InDesign 中的字偶间距和字符间距"
 author = ["Wang Jun"]
-tags = ["Adobe", "InDesing", "Design", "Font"]
+tags = ["Adobe", "InDesign", "Design", "Font"]
 categories = ["PrePress"]
 draft = false
 +++
